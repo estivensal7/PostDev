@@ -1,0 +1,3 @@
+{
+	"mongoURI": "mongodb+srv://graphqlUser:Test123@cluster0-uq6pl.mongodb.net/PostDev?retryWrites=true&w=majority"
+}
