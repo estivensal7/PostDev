@@ -1,4 +1,6 @@
 {
 	"mongoURI": "mongodb+srv://graphqlUser:Test123@cluster0-uq6pl.mongodb.net/PostDev?retryWrites=true&w=majority",
-	"jwtSecret": "F6TYXO6osux0tzRpC3NU"
+	"jwtSecret": "F6TYXO6osux0tzRpC3NU",
+	"githubClientId": "9e961f6007fd81f6298c",
+	"githubSecret": "8599438bab29c333bc205413ca236e94c4605ec0"
 }
