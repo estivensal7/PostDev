@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: "Users",
   },
   text: {
     type: String,
@@ -20,7 +19,6 @@ const PostSchema = new Schema({
     {
       user: {
         type: Schema.Types.ObjectId,
-        ref: "Users",
       },
     },
   ],
@@ -28,7 +26,6 @@ const PostSchema = new Schema({
     {
       user: {
         type: Schema.Types.ObjectId,
-        ref: "Users",
       },
       text: {
         type: String,
@@ -40,12 +37,16 @@ const PostSchema = new Schema({
       avatar: {
         type: String,
       },
-      Date: {
+      date: {
         type: Date,
         default: Date.now,
       },
     },
   ],
+  date: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
-module.exports = Post = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model("post", PostSchema);
