@@ -1,5 +1,6 @@
 # Config
 config/default.json
+config/production.json
 
 # Logs
 logs
