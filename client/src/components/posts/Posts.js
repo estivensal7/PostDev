@@ -1,10 +1,38 @@
-import React from "react";
+import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import PostItem from "./PostItem";
+import PostForm from "./PostForm";
+import { getPosts } from "../../actions/post";
 
-function Posts(props) {
-  return <div>Posts</div>;
-}
+const Posts = ({ getPosts, post: { posts } }) => {
+  useEffect(() => {
+    getPosts();
+  }, [getPosts]);
 
-Posts.propTypes = {};
+  return (
+    <Fragment>
+      <h1 className="large text-primary">Posts</h1>
+      <p className="lead">
+        <i className="fas fa-user" /> Welcome to the community
+      </p>
+      <PostForm />
+      <div className="posts">
+        {posts.map((post) => (
+          <PostItem key={post._id} post={post} />
+        ))}
+      </div>
+    </Fragment>
+  );
+};
 
-export default Posts;
+Posts.propTypes = {
+  getPosts: PropTypes.func.isRequired,
+  post: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  post: state.post,
+});
+
+export default connect(mapStateToProps, { getPosts })(Posts);
