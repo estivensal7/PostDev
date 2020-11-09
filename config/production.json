@@ -1,5 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://graphqlUser:Test123@cluster0-uq6pl.mongodb.net/PostDev?retryWrites=true&w=majority",
-  "jwtSecret": "F6TYXO6osux0tzRpC3NU",
-  "githubToken": "c10bc1c32a9862d91c1d67f2048fdbcb8a59ec5a"
-}
